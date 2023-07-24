@@ -30,7 +30,7 @@ throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 }
 @Override
 public Song addSong(Song song){
-    db.update("INSERT INTO playlist (songName,lyricist,songSinger,musicDirector)values(?,?,?,?)",song.getsongName(),song.getlyricist(),song.getsongSinger(),song.getmusicDirector());
+    db.update("INSERT INTO playlist (songName,lyricist,singer,musicDirector)values(?,?,?,?)",song.getsongName(),song.getlyricist(),song.getsinger(),song.getmusicDirector());
    
     return getSongById(song.getsongId());
 }
@@ -42,8 +42,8 @@ public Song updatedSong(int songId,Song song){
     if(song.getlyricist()!=null){
         db.update("UPDATE playlist SET lyricist=? WHERE songId=?",song.getlyricist(),songId);
     }
-    if(song.getsongSinger()!=null){
-        db.update("UPDATE playlist SET songSinger=? WHERE songId=?",song.getsongSinger(),songId);
+    if(song.getsinger()!=null){
+        db.update("UPDATE playlist SET songSinger=? WHERE songId=?",song.getsinger(),songId);
     }
     if(song.getmusicDirector()!=null){
         db.update("UPDATE playlist SET musicDirector=? WHERE songId=?",song.getmusicDirector(),songId);

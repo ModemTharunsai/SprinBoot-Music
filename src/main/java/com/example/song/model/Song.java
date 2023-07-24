@@ -4,13 +4,13 @@ public class Song {
     private int songId;
     private String songName;
     private String lyricist;
-    private String songSinger;
+    private String singer;
     private String musicDirector;
 
-    public Song(int songId, String songName, String lyricist,String songSinger,String musicDirector) {
+    public Song(int songId, String songName, String lyricist,String singer,String musicDirector) {
         this.songId = songId;
         this.songName = songName;
-        this.songSinger=songSinger;
+        this.singer=singer;
         this.lyricist= lyricist;
         this.musicDirector=musicDirector;
     }
@@ -38,12 +38,12 @@ public class Song {
     public void setlyricist(String lyricist) {
         this.lyricist = lyricist;
     }
-     public String getsongSinger() {
-        return songSinger;
+     public String getsinger() {
+        return singer;
     }
 
-    public void setsongSinger(String songSinger) {
-        this.songSinger = songSinger;
+    public void setsinger(String singer) {
+        this.singer = singer;
     }
     public String getmusicDirector() {
         return musicDirector;

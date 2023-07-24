@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.RowMapper;
     return new Song(
         rs.getInt("songId"),
         rs.getString("songName"),
-        rs.getString("songSinger"),
+        rs.getString("singer"),
         rs.getString("lyricist"),
         rs.getString("musicDirector")
     );
